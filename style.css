@@ -1,0 +1,24 @@
+/**{
+    border: 0;
+    margin: 0;
+}
+*/
+
+#inputDisplay {
+    text-align: right;
+    color: black;
+    font-size: 35px;
+    border: black solid 1px;
+    width: 150px; 
+}
+#outputDisplay {
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 25px;
+    color: gray;
+    border: black solid 1px;
+    border-top: 0;
+    width: 152px;
+    height: 35px; 
+}
