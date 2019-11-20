@@ -2,7 +2,9 @@ let displayOut = document.getElementById("outputDisplay");
 let displayIn = document.getElementById("inputDisplay");
 let bsb = document.getElementById("back");
 let clb = document.getElementById("clear");
+
 let precision = 4;
+
 
 function renderOutput(outputValue){
     displayOut.innerHTML = outputValue;
@@ -49,14 +51,16 @@ function calcOutput(){
 }
 
 function shiftOutputToInput(){
-    displayIn.value = displayOut.innerHTML;
+    
     if (displayOut.innerHTML === ""){
-        showBackspace();
+        showClear();
     }
     else{
         showClear();
+        displayIn.value = displayOut.innerHTML;
         displayOut.innerHTML = "";
-    }   
+    }  
+     
 }
 
 function clscreen(){
