@@ -56,8 +56,7 @@ function shiftOutputToInput(){
     else{
         showClear();
         displayOut.innerHTML = "";
-    }
-    
+    }   
 }
 
 function clscreen(){

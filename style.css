@@ -5,13 +5,25 @@
 */
 
 body {
-    height: 400px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* DISPLAY */
+#title {
+    display: inline-block;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 35px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.name {
+    color: #2a79f7;
+    font-size: 55px;
+}
+
+/* DISPLAY START */
 
 #inputDisplay {
     text-align: right;
@@ -38,8 +50,9 @@ body {
     padding-bottom: 15px;
 }
 
+/* DISPLAY END */
 
-/* KEYPAD */
+/* KEYPAD START*/
 .row {
     color: black;
     display: flex;
@@ -75,3 +88,5 @@ body {
 .onborder {
     border-left:#d9d9d9 solid 1px;
 }
+
+/* KEYPAD END*/
