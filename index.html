@@ -10,49 +10,52 @@
           href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
           crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Baumans&display=swap" 
+          rel="stylesheet">  
   </head>
 
   <body>
-    <!-- DISPLAY -->
+    <!-- DISPLAY START -->
     <div id="calcDisplay">
         <input id="inputDisplay" oninput="calcOutput()" onfocus="calcOutput()" type="text">
         <div id="outputDisplay"></div>
     </div>
+    <!-- DISPLAY END-->
 
-    <!-- KEYPAD -->
+    <!-- KEYPAD START -->
     <div class="row">
       <div class="column" onclick="insertAtCaret(7)">7</div>
       <div class="column" onclick="insertAtCaret(8)">8</div>
       <div class="column" onclick="insertAtCaret(9)">9</div>
-      <div class="column" onclick="insertAtCaret('/')"><i class="fas fa-divide"></i></div>
-      <div id="back" class="column" onclick="backspaceCaret()"><i class="fas fa-backspace"></i></div>
-      <div id="clear" class="column" onclick="clscreen()">C</div>
+      <div class="column operator onborder" onclick="insertAtCaret('/')"><i class="fas fa-divide"></i></div>
+      <div id="back" class="column operator" onclick="backspaceCaret()"><i class="fas fa-backspace"></i></div>
+      <div id="clear" class="column operator" onclick="clscreen()">C</div>
     </div>
     
     <div class="row">
       <div class="column" onclick="insertAtCaret(4)">4</div>
       <div class="column" onclick="insertAtCaret(5)">5</div>
       <div class="column" onclick="insertAtCaret(6)">6</div>
-      <div class="column" onclick="insertAtCaret('x')"><i class="fas fa-times"></i></div>
-      <div class="column" onclick="insertAtCaret('(')">(</div>
+      <div class="column operator onborder" onclick="insertAtCaret('x')"><i class="fas fa-times"></i></div>
+      <div class="column operator" onclick="insertAtCaret('(')">(</div>
     </div>
 
     <div class="row">
       <div class="column" onclick="insertAtCaret(1)">1</div>
       <div class="column" onclick="insertAtCaret(2)">2</div>
       <div class="column" onclick="insertAtCaret(3)">3</div>
-      <div class="column" onclick="insertAtCaret('-')"><i class="fas fa-minus"></i></div>
-      <div class="column" onclick="insertAtCaret(')')">)</div>
+      <div class="column operator onborder" onclick="insertAtCaret('-')"><i class="fas fa-minus"></i></div>
+      <div class="column operator" onclick="insertAtCaret(')')">)</div>
     </div>
       
     <div class="row">
       <div class="column" onclick="insertAtCaret(0)">0</div>
       <div class="column" onclick="insertAtCaret('.')">.</div>
       <div class="column"> </div>
-      <div class="column" onclick="insertAtCaret('+')"><i class="fas fa-plus"></i></div>
-      <div class="column" onclick="shiftOutputToInput()"><i class="fas fa-equals"></i></div>
+      <div class="column operator onborder" onclick="insertAtCaret('+')"><i class="fas fa-plus"></i></div>
+      <div class="column operator" onclick="shiftOutputToInput()"><i class="fas fa-equals"></i></div>
     </div>
- 
+    <!-- KEYPAD END -->
 
     <script src="calc.js"></script>
   </body>

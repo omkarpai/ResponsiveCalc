@@ -50,8 +50,14 @@ function calcOutput(){
 
 function shiftOutputToInput(){
     displayIn.value = displayOut.innerHTML;
-    displayOut.innerHTML = "";
-    showClear();
+    if (displayOut.innerHTML === ""){
+        showBackspace();
+    }
+    else{
+        showClear();
+        displayOut.innerHTML = "";
+    }
+    
 }
 
 function clscreen(){
@@ -70,7 +76,7 @@ function showClear(){
     clb.style.display = "flex";
 }
 
-
+displayIn.focus();
 
 
 /*Usefull regex

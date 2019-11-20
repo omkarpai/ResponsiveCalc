@@ -5,7 +5,7 @@
 */
 
 body {
-    height: 700px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,38 +15,48 @@ body {
 
 #inputDisplay {
     text-align: right;
+    /*font-family: 'Baumans', cursive;*/
     color: black;
+    caret-color: #2a79f7;
     font-size: 35px;
-    border: black solid 1px;
+    /*border: black solid 1px;*/
     width: 248px;
+    border: none;
+    padding-bottom: 15px;
 }
 #outputDisplay {
     text-align: right;
+    font-family: 'Baumans', cursive;
     display: table-cell;
     vertical-align: middle;
     font-size: 25px;
     color: gray;
-    border: black solid 1px;
+    /*border: black solid 1px;*/
     border-top: 0;
     width: 250px;
     height: 35px; 
+    padding-bottom: 15px;
 }
 
 
 /* KEYPAD */
 .row {
+    color: black;
     display: flex;
     flex-direction: row;
-    height: 50px;
+    height: 60px;
     width: 252px;
+    font-family: 'Baumans', cursive;
+    font-size: 25px;
 }
 
 .column {
+    border: 0;
     width: 51px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: black solid 1px;
+    /*border: black solid 1px;*/
 }
 
 #clear {
@@ -55,4 +65,13 @@ body {
 
 #back {
     display: flex;
+}
+
+.operator {
+    font-size: 15px;
+    color: #2a79f7;
+}
+
+.onborder {
+    border-left:#d9d9d9 solid 1px;
 }
