@@ -1,6 +1,8 @@
 let displayOut = document.getElementById("outputDisplay");
 let displayIn = document.getElementById("inputDisplay");
-//let caretPos;
+let bsb = document.getElementById("back");
+let clb = document.getElementById("clear");
+let precision = 6;
 
 function renderOutput(outputValue){
     displayOut.innerHTML = outputValue;
@@ -8,6 +10,7 @@ function renderOutput(outputValue){
    
 
 function insertAtCaret(text) {
+    showBackspace();
     caretPos = displayIn.selectionStart;
     var textAreaTxt = displayIn.value;
     displayIn.value = textAreaTxt.substring(0, caretPos) + text + textAreaTxt.substring(caretPos);
@@ -26,14 +29,16 @@ function backspaceCaret() {
 };
 
 function calcOutput(){
+    showBackspace();
     expressn=displayIn.value;
     expressn=expressn.replace('x','*');
     
     try{
     answer = eval(expressn);
+    answer = answer.toPrecision(precision);
     renderOutput(answer);
     }
-    
+
     catch(error){
         renderOutput('SyntaxError');
     }
@@ -43,6 +48,27 @@ function calcOutput(){
     }
 }
 
+function shiftOutputToInput(){
+    displayIn.value = displayOut.innerHTML;
+    displayOut.innerHTML = "";
+    showClear();
+}
+
+function clscreen(){
+    displayIn.value ="";
+    displayOut.innerHTML = "";
+    showBackspace();    
+}
+
+function showBackspace(){
+    bsb.style.display = "flex";
+    clb.style.display = "none";
+}
+
+function showClear(){
+    bsb.style.display = "none";
+    clb.style.display = "flex";
+}
 
 
 

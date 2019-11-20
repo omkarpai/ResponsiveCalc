@@ -42,9 +42,17 @@ body {
 }
 
 .column {
-    width: 50px;
+    width: 51px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: black solid 1px;
+}
+
+#clear {
+    display: none;
+}
+
+#back {
+    display: flex;
 }
