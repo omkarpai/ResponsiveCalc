@@ -21,7 +21,6 @@
       <span id="title">The simple <span class="name">Nokia 6.1+ </span>Calculator</span>
     </h1>
 
-
     <!-- DISPLAY START -->
     <div id="calcDisplay">
         <input id="inputDisplay" oninput="calcOutput()" onfocus="calcOutput()" type="text">
@@ -58,13 +57,14 @@
     <div class="row">
       <div class="column" onclick="insertAtCaret(0)">0</div>
       <div class="column" onclick="insertAtCaret('.')">.</div>
-      <div class="column"> </div>
+      <div class="empty"> </div>
       <div class="column operator onborder" onclick="insertAtCaret('+')"><i class="fas fa-plus"></i></div>
       <div class="column operator" onclick="shiftOutputToInput()"><i class="fas fa-equals"></i></div>
     </div>
     <!-- KEYPAD END -->
 
     <script src="calc.js"></script>
+  
   </body>
 
 </html>

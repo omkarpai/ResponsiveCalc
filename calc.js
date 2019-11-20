@@ -2,7 +2,7 @@ let displayOut = document.getElementById("outputDisplay");
 let displayIn = document.getElementById("inputDisplay");
 let bsb = document.getElementById("back");
 let clb = document.getElementById("clear");
-let precision = 6;
+let precision = 4;
 
 function renderOutput(outputValue){
     displayOut.innerHTML = outputValue;
@@ -62,7 +62,8 @@ function shiftOutputToInput(){
 function clscreen(){
     displayIn.value ="";
     displayOut.innerHTML = "";
-    showBackspace();    
+    showBackspace();  
+    displayIn.focus();  
 }
 
 function showBackspace(){

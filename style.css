@@ -5,7 +5,7 @@
 */
 
 body {
-    height: 800px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +69,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     /*border: black solid 1px;*/
+}
+
+.column:hover{
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    
 }
 
 #clear {
@@ -87,6 +94,16 @@ body {
 
 .onborder {
     border-left:#d9d9d9 solid 1px;
+}
+
+.empty{
+    border: 0;
+    width: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: black solid 1px;*/
+
 }
 
 /* KEYPAD END*/
