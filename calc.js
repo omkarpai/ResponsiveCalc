@@ -31,14 +31,14 @@ function backspaceCaret() {
 function calcOutput(){
     showBackspace();
     expressn=displayIn.value;
-    expressn=expressn.replace('x','*');
-    
+    expressn=expressn.replace(/x/g,"*");
+    console.log(expressn);
     try{
     answer = eval(expressn);
     answer = answer.toPrecision(precision);
     renderOutput(answer);
     }
-
+    
     catch(error){
         renderOutput('SyntaxError');
     }
