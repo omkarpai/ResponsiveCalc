@@ -15,7 +15,7 @@
   <body>
     <!-- DISPLAY -->
     <div id="calcDisplay">
-        <input id="inputDisplay" oninput="renderOutput()" onfocus="renderOutput()" type="text">
+        <input id="inputDisplay" oninput="calcOutput()" onfocus="calcOutput()" type="text">
         <div id="outputDisplay"></div>
     </div>
 
@@ -49,7 +49,7 @@
       <div class="column" onclick="insertAtCaret('.')">.</div>
       <div class="column"> </div>
       <div class="column" onclick="insertAtCaret('+')"><i class="fas fa-plus"></i></div>
-      <div class="column" onclick="insertAtCaret('=')"><i class="fas fa-equals"></i></div>
+      <div class="column" onclick="shiftOutputToInput()"><i class="fas fa-equals"></i></div>
     </div>
  
 
