@@ -4,12 +4,21 @@
 }
 */
 
+body {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* DISPLAY */
+
 #inputDisplay {
     text-align: right;
     color: black;
     font-size: 35px;
     border: black solid 1px;
-    width: 150px; 
+    width: 248px;
 }
 #outputDisplay {
     text-align: right;
@@ -19,6 +28,23 @@
     color: gray;
     border: black solid 1px;
     border-top: 0;
-    width: 152px;
+    width: 250px;
     height: 35px; 
+}
+
+
+/* KEYPAD */
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 252px;
+}
+
+.column {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black solid 1px;
 }
