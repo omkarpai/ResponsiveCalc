@@ -1,18 +1,23 @@
-/**{
+*{
     border: 0;
     margin: 0;
+    padding: 0px;
 }
-*/
+
 
 body {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
+    overflow: hidden;
+    
 }
 
+
 #title {
-    display: inline-block;
+    display: none;
     font-family: 'Thasadith', sans-serif;
     font-size: 35px;
     padding-bottom: 25px;
@@ -24,6 +29,11 @@ body {
 }
 
 /* DISPLAY START */
+#calcDiplay {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
 
 #inputDisplay {
     text-align: right;
@@ -32,43 +42,55 @@ body {
     caret-color: #2a79f7;
     font-size: 35px;
     /*border: black solid 1px;*/
-    width: 248px;
+    width: 98%;
+    height: 8vh;
+    min-height: 40px;
     border: none;
     padding-bottom: 15px;
 }
 #outputDisplay {
     text-align: right;
     font-family: 'Baumans', cursive;
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: middle;
     font-size: 25px;
     color: gray;
     /*border: black solid 1px;*/
     border-top: 0;
-    width: 250px;
-    height: 35px; 
+    width:98%;
+    min-height: 30px;
+    height: 5vh; /*35*/
     padding-bottom: 15px;
 }
 
 /* DISPLAY END */
 
 /* KEYPAD START*/
+.keys {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: 100%;
+}
+
 .row {
     color: black;
     display: flex;
     flex-direction: row;
-    height: 60px;
-    width: 252px;
+    width: 100vw;
+    min-height: 50px;
     font-family: 'Baumans', cursive;
     font-size: 25px;
 }
 
 .column {
     border: 0;
-    width: 51px;
+    width: 100vw;
     display: flex;
+    height: 20vh;
     align-items: center;
     justify-content: center;
+    min-height: 50px;
     
     /*border: black solid 1px;*/
 }
@@ -98,10 +120,12 @@ body {
 
 .empty{
     border: 0;
-    width: 51px;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 20vh;
+    min-height: 50px;
     /*border: black solid 1px;*/
 
 }
